@@ -1,4 +1,5 @@
 import 'package:docdoc/src/config/router/app_router.dart';
+import 'package:docdoc/src/config/router/routes.dart';
 import 'package:docdoc/src/config/themes/app_theme.dart';
 import 'package:docdoc/src/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class DocdocApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: AppStrings.appTitle,
         theme: AppTheme.light,
+        initialRoute: Routes.onboardingRoute,
         onGenerateRoute: AppRouter.onGenerateRoute,
       ),
     );

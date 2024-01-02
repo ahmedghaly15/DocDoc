@@ -3,10 +3,47 @@ import 'package:docdoc/src/core/widgets/primary_button.dart';
 import 'package:docdoc/src/features/onboarding/view/widgets/app_logo_and_name.dart';
 import 'package:docdoc/src/features/onboarding/view/widgets/doctor_and_onboarding_title.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class OnboardingView extends StatelessWidget {
+class OnboardingView extends StatefulWidget {
   const OnboardingView({super.key});
+
+  @override
+  State<OnboardingView> createState() => _OnboardingViewState();
+}
+
+class _OnboardingViewState extends State<OnboardingView> {
+  @override
+  void initState() {
+    FlutterNativeSplash.remove();
+    super.initState();
+  }
+
+  void _setSystemUIOverlayStyle() {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+    final double bottomPadding = View.of(context).viewPadding.bottom;
+
+    // Set the color based on the presence of the system navigation bar
+    final Color systemNavigationBarColor =
+        bottomPadding > 0 ? Colors.black : Colors.transparent;
+
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        systemNavigationBarColor: systemNavigationBarColor,
+        statusBarColor: Colors.transparent,
+        statusBarBrightness: Brightness.dark,
+        statusBarIconBrightness: Brightness.dark,
+      ),
+    );
+  }
+
+  @override
+  void didChangeDependencies() {
+    _setSystemUIOverlayStyle();
+    super.didChangeDependencies();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +51,7 @@ class OnboardingView extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 30.h),
+            padding: EdgeInsets.only(top: 15.h, bottom: 30.h),
             child: Column(
               children: <Widget>[
                 const AppLogoAndName(),

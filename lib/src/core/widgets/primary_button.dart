@@ -15,7 +15,7 @@ class PrimaryButton extends StatelessWidget {
     this.boxShadow,
     this.child,
     this.width = double.infinity,
-    this.height = 50,
+    this.height = 52,
   }) : super(key: key);
 
   final String? text;
