@@ -17,4 +17,9 @@ class AppAssets {
   /// Assets for svgsLowOpacityLogo
   /// assets/svgs/low_opacity_logo.svg
   static const String svgsLowOpacityLogo = "assets/svgs/low_opacity_logo.svg";
+
+  /// Assets for svgsSplashLowOpacityLogo
+  /// assets/svgs/splash_low_opacity_logo.svg
+  static const String svgsSplashLowOpacityLogo =
+      "assets/svgs/splash_low_opacity_logo.svg";
 }
