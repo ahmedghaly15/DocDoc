@@ -5,5 +5,10 @@ class AppTheme {
   static ThemeData get light => ThemeData(
         primaryColor: AppColors.primary,
         scaffoldBackgroundColor: Colors.white,
+        textButtonTheme: TextButtonThemeData(
+          style: ButtonStyle(
+            padding: MaterialStateProperty.all(EdgeInsets.zero),
+          ),
+        ),
       );
 }

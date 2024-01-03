@@ -14,7 +14,7 @@ class DocdocApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: MaterialApp(
+      builder: (_, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: AppStrings.appTitle,
         theme: AppTheme.light,
