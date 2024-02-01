@@ -7,4 +7,6 @@ class AppColors {
   static const Color secondaryGrey = Color(0xffA9B2B9);
   static const Color textFormFieldFillColor = Color(0xffFDFDFF);
   static const Color hintColor = Color(0xffC2C2C2);
+  static const Color darkGrey = Color(0xff9E9E9E);
+  static const Color lightBlack = Color(0xff242424);
 }

@@ -1,5 +1,3 @@
-import 'package:docdoc/src/config/themes/app_colors.dart';
-import 'package:docdoc/src/config/themes/app_text_styles.dart';
 import 'package:docdoc/src/core/helpers/auth_helper.dart';
 import 'package:docdoc/src/core/widgets/custom_text_form_field.dart';
 import 'package:docdoc/src/core/widgets/primary_button.dart';
@@ -91,12 +89,7 @@ class _LoginFormState extends State<LoginForm> {
               const RememberMeCheckBox(),
               TextButton(
                 onPressed: () {},
-                child: Text(
-                  'Forgot Password?',
-                  style: AppTextStyles.font12Regular.copyWith(
-                    color: AppColors.primary,
-                  ),
-                ),
+                child: const Text('Forgot Password?'),
               ),
             ],
           ),
