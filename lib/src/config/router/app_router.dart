@@ -1,7 +1,7 @@
 import 'package:docdoc/src/config/router/routes.dart';
 import 'package:docdoc/src/config/themes/app_text_styles.dart';
-import 'package:docdoc/src/features/auth/views/login_view.dart';
-import 'package:docdoc/src/features/onboarding/view/onboarding_view.dart';
+import 'package:docdoc/src/features/auth/presentation/views/login_view.dart';
+import 'package:docdoc/src/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
