@@ -1,8 +1,8 @@
-import 'package:docdoc/src/features/auth/views/widgets/auth_subtitle.dart';
-import 'package:docdoc/src/features/auth/views/widgets/auth_title.dart';
-import 'package:docdoc/src/features/auth/views/widgets/login/dont_have_acc.dart';
-import 'package:docdoc/src/features/auth/views/widgets/login/login_form.dart';
-import 'package:docdoc/src/features/auth/views/widgets/login/terms_and_privacy_policy_text.dart';
+import 'package:docdoc/src/features/auth/presentation/views/widgets/auth_subtitle.dart';
+import 'package:docdoc/src/features/auth/presentation/views/widgets/auth_title.dart';
+import 'package:docdoc/src/features/auth/presentation/views/widgets/login/dont_have_acc.dart';
+import 'package:docdoc/src/features/auth/presentation/views/widgets/login/login_form.dart';
+import 'package:docdoc/src/features/auth/presentation/views/widgets/login/terms_and_privacy_policy_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
