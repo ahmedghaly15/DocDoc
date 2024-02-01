@@ -1,4 +1,6 @@
+import 'package:docdoc/src/config/router/routes.dart';
 import 'package:docdoc/src/config/themes/app_text_styles.dart';
+import 'package:docdoc/src/core/utils/app_navigator.dart';
 import 'package:docdoc/src/core/widgets/primary_button.dart';
 import 'package:docdoc/src/features/onboarding/view/widgets/app_logo_and_name.dart';
 import 'package:docdoc/src/features/onboarding/view/widgets/doctor_and_onboarding_title.dart';
@@ -68,7 +70,8 @@ class _OnboardingViewState extends State<OnboardingView> {
                       ),
                       SizedBox(height: 32.h),
                       PrimaryButton(
-                        onPressed: () {},
+                        onPressed: () =>
+                            context.pushNamed(routeName: Routes.loginRoute),
                         text: 'Get Started',
                       ),
                     ],

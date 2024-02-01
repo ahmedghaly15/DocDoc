@@ -21,4 +21,19 @@ class AppTextStyles {
     fontSize: 14.sp,
     fontWeight: FontWeight.normal,
   );
+
+  static TextStyle font12Regular = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.normal,
+  );
+
+  static TextStyle font12Medium = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+  );
+
+  static TextStyle font12SemiBold = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w600,
+  );
 }
