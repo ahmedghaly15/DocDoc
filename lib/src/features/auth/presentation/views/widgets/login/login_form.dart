@@ -1,8 +1,8 @@
 import 'package:docdoc/src/core/helpers/auth_helper.dart';
 import 'package:docdoc/src/core/widgets/custom_text_form_field.dart';
 import 'package:docdoc/src/core/widgets/primary_button.dart';
-import 'package:docdoc/src/features/auth/views/widgets/login/remember_me_checkbox.dart';
-import 'package:docdoc/src/features/auth/views/widgets/text_field_separator.dart';
+import 'package:docdoc/src/features/auth/presentation/views/widgets/login/remember_me_checkbox.dart';
+import 'package:docdoc/src/features/auth/presentation/views/widgets/text_field_separator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
