@@ -13,7 +13,7 @@ class DontHaveAcc extends StatelessWidget {
         Text(
           "Don't have an account?",
           style: AppTextStyles.font12SemiBold.copyWith(
-            color: AppColors.lightBlack,
+            color: AppColors.darkBlue,
           ),
         ),
         TextButton(

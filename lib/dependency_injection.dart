@@ -18,4 +18,8 @@ Future<void> setupGetIt() async {
   await setupDIForExternal();
 
   setupDIForCore();
+
+  setupDIForRepos();
+
+  setupDIForCubits();
 }

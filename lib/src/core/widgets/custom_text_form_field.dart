@@ -120,8 +120,16 @@ class CustomTextFormField extends StatelessWidget {
               borderColor: AppColors.primary,
               width: 2,
             ),
-        errorBorder: errorBorder ?? _buildUnderlineInputBorder(),
-        focusedErrorBorder: focusedErrorBorder ?? _buildUnderlineInputBorder(),
+        errorBorder: errorBorder ??
+            _buildUnderlineInputBorder(
+              borderColor: Colors.red,
+              width: 1.3,
+            ),
+        focusedErrorBorder: focusedErrorBorder ??
+            _buildUnderlineInputBorder(
+              borderColor: Colors.red,
+              width: 1.3,
+            ),
         border: border ?? _buildUnderlineInputBorder(),
         disabledBorder: disabledBorder,
       ),

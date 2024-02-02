@@ -22,6 +22,11 @@ class AppTextStyles {
     fontWeight: FontWeight.normal,
   );
 
+  static TextStyle font13Regular = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeight.normal,
+  );
+
   static TextStyle font12Regular = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeight.normal,
