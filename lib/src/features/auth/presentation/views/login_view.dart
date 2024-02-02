@@ -1,6 +1,7 @@
 import 'package:docdoc/src/features/auth/presentation/views/widgets/auth_subtitle.dart';
 import 'package:docdoc/src/features/auth/presentation/views/widgets/auth_title.dart';
 import 'package:docdoc/src/features/auth/presentation/views/widgets/login/dont_have_acc.dart';
+import 'package:docdoc/src/features/auth/presentation/views/widgets/login/login_bloc_listener.dart';
 import 'package:docdoc/src/features/auth/presentation/views/widgets/login/login_form.dart';
 import 'package:docdoc/src/features/auth/presentation/views/widgets/login/terms_and_privacy_policy_text.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ class LoginView extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 30.h),
+          padding: EdgeInsets.symmetric(horizontal: 30.w),
           child: CustomScrollView(
             slivers: [
               SliverToBoxAdapter(
@@ -28,6 +29,7 @@ class LoginView extends StatelessWidget {
                     ),
                     SizedBox(height: 36.h),
                     const LoginForm(),
+                    const LoginBlocListener(),
                     SizedBox(height: 45.h),
                   ],
                 ),

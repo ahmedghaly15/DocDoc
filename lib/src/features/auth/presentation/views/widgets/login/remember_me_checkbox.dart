@@ -21,7 +21,7 @@ class _RememberMeCheckBoxState extends State<RememberMeCheckBox> {
           scale: 1.2.w,
           child: Checkbox(
             value: isChecked,
-            activeColor: AppColors.primary,
+            activeColor: AppColors.primaryColor,
             onChanged: (value) {
               setState(() {
                 isChecked = value!;

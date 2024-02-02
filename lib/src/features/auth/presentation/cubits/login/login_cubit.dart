@@ -1,12 +1,21 @@
 import 'package:docdoc/src/features/auth/data/models/login/login_request_body.dart';
 import 'package:docdoc/src/features/auth/data/repos/login_repo.dart';
 import 'package:docdoc/src/features/auth/presentation/cubits/login/login_state.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginCubit extends Cubit<LoginState> {
   final LoginRepo _loginRepo;
 
   LoginCubit(this._loginRepo) : super(const LoginState.initial());
+
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+  final FocusNode emailFocusNode = FocusNode();
+  final FocusNode passwordFocusNode = FocusNode();
+
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   void login(LoginRequestBody loginRequestBody) async {
     emit(const LoginState.loading());
