@@ -18,7 +18,7 @@ class AuthTitle extends StatelessWidget {
       child: Text(
         title,
         style: AppTextStyles.font24Bold.copyWith(
-          color: AppColors.primary,
+          color: AppColors.primaryColor,
         ),
       ),
     );
