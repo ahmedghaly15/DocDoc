@@ -10,6 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # A build system for Dart code generation and modular compilation.
+  build_runner: ^2.4.8
   # Simple direct Service Locator that allows to access the concrete implementation from everywhere
   get_it: ^7.6.4
   # State management
@@ -36,11 +38,14 @@ dependencies:
   flutter_screenutil: ^5.9.0
   # Updating app's launcher icon
   flutter_launcher_icons: ^0.13.1
+  # Flutter plugin for reading and writing simple key-value pairs for cache
+  shared_preferences: ^2.0.20
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  # Recommended lints to encourage good coding practices
+  flutter_lints: ^3.0.1
 
 flutter:
   uses-material-design: true

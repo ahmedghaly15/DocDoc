@@ -1,6 +1,9 @@
+import 'package:docdoc/dependency_injection.dart';
 import 'package:docdoc/src/config/router/routes.dart';
 import 'package:docdoc/src/config/themes/app_text_styles.dart';
+import 'package:docdoc/src/core/helpers/cache_helper.dart';
 import 'package:docdoc/src/core/utils/app_navigator.dart';
+import 'package:docdoc/src/core/utils/app_strings.dart';
 import 'package:docdoc/src/core/widgets/primary_button.dart';
 import 'package:docdoc/src/features/onboarding/presentation/view/widgets/app_logo_and_name.dart';
 import 'package:docdoc/src/features/onboarding/presentation/view/widgets/doctor_and_onboarding_title.dart';
@@ -33,8 +36,7 @@ class OnboardingView extends StatelessWidget {
                       ),
                       SizedBox(height: 32.h),
                       PrimaryButton(
-                        onPressed: () =>
-                            context.pushNamed(routeName: Routes.loginRoute),
+                        onPressed: () => _navigateToLogin(context),
                         text: 'Get Started',
                       ),
                     ],
@@ -46,5 +48,19 @@ class OnboardingView extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _navigateToLogin(BuildContext context) {
+    getIt
+        .get<CacheHelper>()
+        .saveData(
+          key: AppStrings.cachedOnboarding,
+          value: true,
+        )
+        .then((value) {
+      if (value) {
+        context.pushNamed(routeName: Routes.loginRoute);
+      }
+    });
   }
 }

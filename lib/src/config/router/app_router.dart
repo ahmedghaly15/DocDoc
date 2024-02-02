@@ -1,14 +1,15 @@
 import 'package:docdoc/src/config/router/routes.dart';
 import 'package:docdoc/src/config/themes/app_text_styles.dart';
 import 'package:docdoc/src/features/auth/presentation/views/login_view.dart';
+import 'package:docdoc/src/features/entry/presentation/views/entry_view.dart';
 import 'package:docdoc/src/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
   static Route<dynamic>? onGenerateRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
-      // case Routes.initialRoute:
-      //   return MaterialPageRoute(builder: (_) => const SplashView());
+      case Routes.initialRoute:
+        return MaterialPageRoute(builder: (_) => const EntryView());
 
       case Routes.onboardingRoute:
         return MaterialPageRoute(builder: (_) => const OnboardingView());
