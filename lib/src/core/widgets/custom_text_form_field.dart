@@ -96,7 +96,7 @@ class CustomTextFormField extends StatelessWidget {
       onChanged: onChanged,
       style: _customTextFieldTextStyle(),
       maxLines: maxLines,
-      cursorColor: AppColors.primary,
+      cursorColor: AppColors.primaryColor,
       decoration: InputDecoration(
         filled: filled,
         fillColor: AppColors.textFormFieldFillColor,
@@ -117,7 +117,7 @@ class CustomTextFormField extends StatelessWidget {
         enabledBorder: enabledBorder ?? _buildUnderlineInputBorder(),
         focusedBorder: focusedBorder ??
             _buildUnderlineInputBorder(
-              borderColor: AppColors.primary,
+              borderColor: AppColors.primaryColor,
               width: 2,
             ),
         errorBorder: errorBorder ??

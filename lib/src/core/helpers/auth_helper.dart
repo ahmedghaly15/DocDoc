@@ -5,7 +5,7 @@ class AuthHelper {
   static String? validatingEmailField({String? value}) {
     if (value == null || value.isEmpty) {
       return "Email can't be blank!";
-    } else if (AppRegex.isEmailValid(value)) {
+    } else if (!AppRegex.isEmailValid(value)) {
       return "Please enter a valid email";
     }
     return null;
@@ -14,7 +14,7 @@ class AuthHelper {
   static String? validatingPasswordField({String? value}) {
     if (value == null || value.isEmpty) {
       return "Password can't be blank!";
-    } else if (AppRegex.isPasswordValid(value)) {
+    } else if (!AppRegex.isPasswordValid(value)) {
       return "Please enter a valid password";
     }
     return null;
