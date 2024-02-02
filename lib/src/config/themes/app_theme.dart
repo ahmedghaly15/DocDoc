@@ -4,12 +4,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppTheme {
   static ThemeData get light => ThemeData(
-        primaryColor: AppColors.primary,
+        primaryColor: AppColors.primaryColor,
         scaffoldBackgroundColor: Colors.white,
         textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
             foregroundColor: const MaterialStatePropertyAll(
-              AppColors.primary,
+              AppColors.primaryColor,
             ),
             padding: MaterialStatePropertyAll(
               EdgeInsets.symmetric(
