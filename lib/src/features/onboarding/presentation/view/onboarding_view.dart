@@ -1,4 +1,4 @@
-import 'package:docdoc/service_locator.dart';
+import 'package:docdoc/dependency_injection.dart';
 import 'package:docdoc/src/config/router/routes.dart';
 import 'package:docdoc/src/config/themes/app_text_styles.dart';
 import 'package:docdoc/src/core/helpers/cache_helper.dart';
