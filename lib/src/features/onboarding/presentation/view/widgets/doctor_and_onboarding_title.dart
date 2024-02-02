@@ -34,7 +34,7 @@ class DoctorAndOnboardingTitle extends StatelessWidget {
           child: Text(
             "Best Doctor\nAppointment App",
             style: AppTextStyles.font32Bold.copyWith(
-              color: AppColors.primary,
+              color: AppColors.primaryColor,
               height: 1.4.h,
             ),
             textAlign: TextAlign.center,
