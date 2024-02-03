@@ -14,10 +14,15 @@ class RegisterCubit extends Cubit<RegisterState> {
 
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
-  final TextEditingController phoneController = TextEditingController();
+  final TextEditingController phoneNumberController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController passwordConfirmationController =
       TextEditingController();
+
+  final FocusNode emailFocusNode = FocusNode();
+  final FocusNode passwordFocusNode = FocusNode();
+  final FocusNode passwordConfirmationFocusNode = FocusNode();
+  final FocusNode phoneNumberFocusNode = FocusNode();
 
   final formKey = GlobalKey<FormState>();
 
@@ -28,7 +33,7 @@ class RegisterCubit extends Cubit<RegisterState> {
       RegisterRequestBody(
         name: nameController.text.trim(),
         email: emailController.text.trim(),
-        phone: phoneController.text.trim(),
+        phone: phoneNumberController.text.trim(),
         password: passwordController.text,
         passwordConfirmation: passwordConfirmationController.text,
         gender: 0,

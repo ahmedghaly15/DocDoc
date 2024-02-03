@@ -4,6 +4,7 @@ import 'package:docdoc/src/core/helpers/auth_helper.dart';
 import 'package:docdoc/src/core/widgets/custom_text_form_field.dart';
 import 'package:docdoc/src/core/widgets/primary_button.dart';
 import 'package:docdoc/src/features/auth/presentation/cubits/login/login_cubit.dart';
+import 'package:docdoc/src/features/auth/presentation/views/widgets/email_text_form_field.dart';
 import 'package:docdoc/src/features/auth/presentation/views/widgets/login/password_validations.dart';
 import 'package:docdoc/src/features/auth/presentation/views/widgets/login/remember_me_checkbox.dart';
 import 'package:docdoc/src/features/auth/presentation/views/widgets/text_field_separator.dart';
@@ -96,18 +97,10 @@ class _LoginFormState extends State<LoginForm> {
       autovalidateMode: autoValidateMode,
       child: Column(
         children: <Widget>[
-          CustomTextFormField(
-            controller: _emailController,
-            focusNode: _emailFocusNode,
-            hintText: 'Email',
-            autofillHints: const <String>[AutofillHints.email],
-            keyboardType: TextInputType.emailAddress,
-            validating: (String? val) =>
-                AuthHelper.validatingEmailField(value: val),
-            onEditingComplete: () => AuthHelper.requestFocus(
-              context,
-              _passwordFocusNode,
-            ),
+          EmailTextFormField(
+            emailController: _emailController,
+            emailFocusNode: _emailFocusNode,
+            passwordFocusNode: _passwordFocusNode,
           ),
           const TextFieldSeparator(),
           CustomTextFormField(
