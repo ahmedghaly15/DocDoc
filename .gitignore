@@ -44,7 +44,7 @@ app.*.map.json
 
 
 # Ignored
-.vscode
+.vscode/settings.json
 linux
 windows
 macos
