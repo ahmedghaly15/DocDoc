@@ -3,7 +3,6 @@ import 'package:docdoc/src/core/helpers/app_regex.dart';
 import 'package:docdoc/src/core/helpers/auth_helper.dart';
 import 'package:docdoc/src/core/widgets/custom_text_form_field.dart';
 import 'package:docdoc/src/core/widgets/primary_button.dart';
-import 'package:docdoc/src/features/auth/data/models/login/login_request_body.dart';
 import 'package:docdoc/src/features/auth/presentation/cubits/login/login_cubit.dart';
 import 'package:docdoc/src/features/auth/presentation/views/widgets/login/password_validations.dart';
 import 'package:docdoc/src/features/auth/presentation/views/widgets/login/remember_me_checkbox.dart';
@@ -162,12 +161,7 @@ class _LoginFormState extends State<LoginForm> {
 
   void validateThenDoLogin(BuildContext context) {
     if (context.read<LoginCubit>().formKey.currentState!.validate()) {
-      context.read<LoginCubit>().login(
-            LoginRequestBody(
-              email: context.read<LoginCubit>().emailController.text.trim(),
-              password: context.read<LoginCubit>().passwordController.text,
-            ),
-          );
+      context.read<LoginCubit>().login();
     } else {
       setState(() {
         autoValidateMode = AutovalidateMode.always;
