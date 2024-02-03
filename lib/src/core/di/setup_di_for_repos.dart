@@ -4,4 +4,8 @@ void setupDIForRepos() {
   getIt.registerLazySingleton<LoginRepo>(
     () => LoginRepoImpl(getIt.get<ApiService>()),
   );
+
+  getIt.registerLazySingleton<RegisterRepo>(
+    () => RegisterRepoImpl(getIt.get<ApiService>()),
+  );
 }
