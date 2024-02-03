@@ -19,6 +19,7 @@ class RegisterForm extends StatefulWidget {
 }
 
 class _RegisterFormState extends State<RegisterForm> {
+  late final TextEditingController _nameController;
   late final TextEditingController _emailController;
   late final TextEditingController _passwordController;
   late final TextEditingController _passwordConfirmationController;
@@ -64,6 +65,7 @@ class _RegisterFormState extends State<RegisterForm> {
   }
 
   void _initControllers() {
+    _nameController = context.read<RegisterCubit>().nameController;
     _emailController = context.read<RegisterCubit>().emailController;
     _passwordController = context.read<RegisterCubit>().passwordController;
     _passwordConfirmationController =
@@ -93,6 +95,7 @@ class _RegisterFormState extends State<RegisterForm> {
   }
 
   void _disposeControllers() {
+    _nameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
     _passwordConfirmationController.dispose();
@@ -113,6 +116,19 @@ class _RegisterFormState extends State<RegisterForm> {
       autovalidateMode: autoValidateMode,
       child: Column(
         children: <Widget>[
+          CustomTextFormField(
+            hintText: 'Name',
+            controller: _nameController,
+            keyboardType: TextInputType.name,
+            autofillHints: const <String>[AutofillHints.name],
+            validating: (String? val) {
+              if (val == null || val.isEmpty) {
+                return 'Please enter your name';
+              }
+              return null;
+            },
+          ),
+          const TextFieldSeparator(),
           EmailTextFormField(
             emailController: _emailController,
             emailFocusNode: _emailFocusNode,
