@@ -20,6 +20,15 @@ class AuthHelper {
     return null;
   }
 
+  static String? validatePhoneField({String? value}) {
+    if (value == null || value.isEmpty) {
+      return "Phone can't be blank!";
+    } else if (!AppRegex.isPhoneNumberValid(value)) {
+      return 'Please enter a valid phone number';
+    }
+    return null;
+  }
+
   static void keyboardUnfocus(BuildContext context) {
     FocusScope.of(context).unfocus();
   }

@@ -1,11 +1,10 @@
-import 'package:docdoc/src/config/router/routes.dart';
 import 'package:docdoc/src/config/themes/app_colors.dart';
 import 'package:docdoc/src/config/themes/app_text_styles.dart';
 import 'package:docdoc/src/core/utils/app_navigator.dart';
 import 'package:flutter/material.dart';
 
-class DontHaveAcc extends StatelessWidget {
-  const DontHaveAcc({super.key});
+class AlreadyHaveAnAcc extends StatelessWidget {
+  const AlreadyHaveAnAcc({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,15 +12,15 @@ class DontHaveAcc extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Text(
-          "Don't have an account?",
+          "Already have an account?",
           style: AppTextStyles.font12SemiBold.copyWith(
             color: AppColors.darkBlue,
           ),
         ),
         TextButton(
-          onPressed: () => context.pushNamed(routeName: Routes.registerRoute),
-          child: const Text('Sign Up'),
-        ),
+          onPressed: () => context.pop(),
+          child: const Text('Sign In'),
+        )
       ],
     );
   }
