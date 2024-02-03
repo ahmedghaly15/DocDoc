@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({
-    Key? key,
+    super.key,
     required this.onPressed,
     this.text,
     this.borderRadius,
@@ -16,7 +16,7 @@ class PrimaryButton extends StatelessWidget {
     this.child,
     this.width = double.infinity,
     this.height = 52,
-  }) : super(key: key);
+  });
 
   final String? text;
   final double? borderRadius;
@@ -35,12 +35,12 @@ class PrimaryButton extends StatelessWidget {
       width: width,
       height: height.h,
       decoration: BoxDecoration(
-        color: backgroundColor ?? AppColors.primary,
+        color: backgroundColor ?? AppColors.primaryColor,
         borderRadius:
             BorderRadiusDirectional.circular((borderRadius?.r) ?? 16.0.r),
         boxShadow: boxShadow,
         border: Border.all(
-          color: AppColors.primary,
+          color: AppColors.primaryColor,
           width: 1.w,
         ),
       ),
