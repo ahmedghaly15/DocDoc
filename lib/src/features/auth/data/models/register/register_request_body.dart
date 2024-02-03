@@ -10,7 +10,7 @@ class RegisterRequestBody {
   final String phone;
   @JsonKey(name: 'password_confirmation')
   final String passwordConfirmation;
-  final String gender;
+  final int gender;
 
   RegisterRequestBody({
     required this.name,
