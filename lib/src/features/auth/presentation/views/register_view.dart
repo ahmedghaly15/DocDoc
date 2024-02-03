@@ -1,6 +1,8 @@
 import 'package:docdoc/src/features/auth/presentation/views/widgets/auth_subtitle.dart';
 import 'package:docdoc/src/features/auth/presentation/views/widgets/auth_title.dart';
+import 'package:docdoc/src/features/auth/presentation/views/widgets/register/already_have_acc.dart';
 import 'package:docdoc/src/features/auth/presentation/views/widgets/register/register_form.dart';
+import 'package:docdoc/src/features/auth/presentation/views/widgets/terms_and_privacy_policy_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -25,7 +27,21 @@ class RegisterView extends StatelessWidget {
                           "Sign up now and start exploring all that our app has to offer. We're excited to welcome you to our community!",
                     ),
                     SizedBox(height: 36.h),
+                    // const LoginBlocListener(),
+                    SizedBox(height: 45.h),
                     const RegisterForm(),
+                  ],
+                ),
+              ),
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(height: 24.h),
+                    const Spacer(),
+                    const TermsAndPrivacyPolicyText(),
+                    SizedBox(height: 24.h),
+                    const AlreadyHaveAnAcc(),
                   ],
                 ),
               ),

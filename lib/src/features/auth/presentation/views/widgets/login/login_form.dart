@@ -5,7 +5,7 @@ import 'package:docdoc/src/core/widgets/custom_text_form_field.dart';
 import 'package:docdoc/src/core/widgets/primary_button.dart';
 import 'package:docdoc/src/features/auth/presentation/cubits/login/login_cubit.dart';
 import 'package:docdoc/src/features/auth/presentation/views/widgets/email_text_form_field.dart';
-import 'package:docdoc/src/features/auth/presentation/views/widgets/login/password_validations.dart';
+import 'package:docdoc/src/features/auth/presentation/views/widgets/password_validations.dart';
 import 'package:docdoc/src/features/auth/presentation/views/widgets/login/remember_me_checkbox.dart';
 import 'package:docdoc/src/features/auth/presentation/views/widgets/text_field_separator.dart';
 import 'package:flutter/material.dart';

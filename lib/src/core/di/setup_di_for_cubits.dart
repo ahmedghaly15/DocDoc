@@ -1,11 +1,11 @@
 part of '../../../dependency_injection.dart';
 
 void setupDIForCubits() {
-  getIt.registerLazySingleton<LoginCubit>(
+  getIt.registerFactory<LoginCubit>(
     () => LoginCubit(getIt.get<LoginRepo>()),
   );
 
-  getIt.registerLazySingleton<RegisterCubit>(
+  getIt.registerFactory<RegisterCubit>(
     () => RegisterCubit(getIt.get<RegisterRepo>()),
   );
 }

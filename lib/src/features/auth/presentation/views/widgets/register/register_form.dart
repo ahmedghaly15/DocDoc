@@ -1,9 +1,11 @@
 import 'package:docdoc/src/config/themes/app_colors.dart';
+import 'package:docdoc/src/core/helpers/app_regex.dart';
 import 'package:docdoc/src/core/helpers/auth_helper.dart';
 import 'package:docdoc/src/core/widgets/custom_text_form_field.dart';
 import 'package:docdoc/src/core/widgets/primary_button.dart';
 import 'package:docdoc/src/features/auth/presentation/cubits/register/register_cubit.dart';
 import 'package:docdoc/src/features/auth/presentation/views/widgets/email_text_form_field.dart';
+import 'package:docdoc/src/features/auth/presentation/views/widgets/password_validations.dart';
 import 'package:docdoc/src/features/auth/presentation/views/widgets/text_field_separator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -32,6 +34,7 @@ class _RegisterFormState extends State<RegisterForm> {
 
   bool isPasswordObscureText = true;
   bool isPasswordConfirmationObscureText = true;
+
   bool hasLowercase = false;
   bool hasUppercase = false;
   bool hasSpecialCharacters = false;
@@ -43,7 +46,21 @@ class _RegisterFormState extends State<RegisterForm> {
     _initFormAttributes();
     _initControllers();
     _initFocusNodes();
+    _setupPasswordControllerListener();
     super.initState();
+  }
+
+  void _setupPasswordControllerListener() {
+    _passwordController.addListener(() {
+      setState(() {
+        hasLowercase = AppRegex.hasLowerCase(_passwordController.text);
+        hasUppercase = AppRegex.hasUpperCase(_passwordController.text);
+        hasSpecialCharacters =
+            AppRegex.hasSpecialCharacter(_passwordController.text);
+        hasNumber = AppRegex.hasNumber(_passwordController.text);
+        hasMinLength = AppRegex.hasMinLength(_passwordController.text);
+      });
+    });
   }
 
   void _initControllers() {
@@ -163,6 +180,14 @@ class _RegisterFormState extends State<RegisterForm> {
             autofillHints: const <String>[AutofillHints.telephoneNumber],
             validating: (String? val) =>
                 AuthHelper.validatePhoneField(value: val),
+          ),
+          SizedBox(height: 24.h),
+          PasswordValidations(
+            hasLowercase: hasLowercase,
+            hasUppercase: hasUppercase,
+            hasSpecialCharacters: hasSpecialCharacters,
+            hasNumber: hasNumber,
+            hasMinLength: hasMinLength,
           ),
           SizedBox(height: 32.h),
           PrimaryButton(
