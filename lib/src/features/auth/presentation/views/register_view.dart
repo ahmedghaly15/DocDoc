@@ -29,8 +29,8 @@ class RegisterView extends StatelessWidget {
                     ),
                     SizedBox(height: 36.h),
                     const RegisterBlocListener(),
-                    SizedBox(height: 45.h),
                     const RegisterForm(),
+                    SizedBox(height: 45.h),
                   ],
                 ),
               ),
@@ -38,7 +38,6 @@ class RegisterView extends StatelessWidget {
                 hasScrollBody: false,
                 child: Column(
                   children: <Widget>[
-                    SizedBox(height: 24.h),
                     const Spacer(),
                     const TermsAndPrivacyPolicyText(),
                     SizedBox(height: 24.h),

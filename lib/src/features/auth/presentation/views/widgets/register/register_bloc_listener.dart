@@ -19,8 +19,15 @@ class RegisterBlocListener extends StatelessWidget {
           loading: () => CustomAuthLoading.show(context),
           success: (registerResponse) {
             context.pop();
-            //TODO: instead of just move to home, also show a dialog with a message Text('Congratulations, you have signed up successfully!'),
-            context.pushReplacementNamed(newRoute: Routes.homeRoute);
+
+            CustomDialog.show(
+              context: context,
+              state: CustomDialogStates.success,
+              message: 'Congratulations, you have registered successfully!',
+              actionText: 'Continue',
+              onAction: () =>
+                  context.pushNamedAndRemoveUntil(newRoute: Routes.loginRoute),
+            );
           },
           error: (error) {
             context.pop();

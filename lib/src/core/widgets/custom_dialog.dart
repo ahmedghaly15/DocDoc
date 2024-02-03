@@ -11,6 +11,8 @@ class CustomDialog {
     required BuildContext context,
     required CustomDialogStates state,
     required String message,
+    VoidCallback? onAction,
+    String actionText = 'Done',
   }) {
     showGeneralDialog(
       context: context,
@@ -59,9 +61,9 @@ class CustomDialog {
                       Align(
                         alignment: Alignment.centerRight,
                         child: TextButton(
-                          onPressed: () => context.pop(),
+                          onPressed: onAction ?? () => context.pop(),
                           child: Text(
-                            'Done',
+                            actionText,
                             style: AppTextStyles.font16SemiBold.copyWith(
                               color: AppColors.primaryColor,
                             ),
