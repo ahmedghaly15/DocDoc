@@ -6,7 +6,7 @@ import 'package:docdoc/src/features/auth/presentation/cubits/register/register_c
 import 'package:docdoc/src/features/auth/presentation/views/login_view.dart';
 import 'package:docdoc/src/features/auth/presentation/views/register_view.dart';
 import 'package:docdoc/src/features/entry/presentation/views/entry_view.dart';
-import 'package:docdoc/src/features/home/home.dart';
+import 'package:docdoc/src/features/home/presentation/views/home.dart';
 import 'package:docdoc/src/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
