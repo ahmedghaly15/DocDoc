@@ -51,6 +51,15 @@ class AppAssets {
   static const String imagesAndroid12Splash =
       "assets/images/android_12_splash.png";
 
+  /// Assets for imagesGirlDoctor
+  /// assets/images/girl_doctor.png
+  static const String imagesGirlDoctor = "assets/images/girl_doctor.png";
+
+  /// Assets for imagesHomeBluePattern
+  /// assets/images/home_blue_pattern.png
+  static const String imagesHomeBluePattern =
+      "assets/images/home_blue_pattern.png";
+
   /// Assets for imagesOnboardingDoctor
   /// assets/images/onboarding_doctor.png
   static const String imagesOnboardingDoctor =
@@ -63,6 +72,10 @@ class AppAssets {
   /// Assets for svgsAppLogo
   /// assets/svgs/app_logo.svg
   static const String svgsAppLogo = "assets/svgs/app_logo.svg";
+
+  /// Assets for svgsGirlDoctor
+  /// assets/svgs/girl_doctor.svg
+  static const String svgsGirlDoctor = "assets/svgs/girl_doctor.svg";
 
   /// Assets for svgsLowOpacityLogo
   /// assets/svgs/low_opacity_logo.svg
