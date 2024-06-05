@@ -8,17 +8,17 @@ class AppTheme {
         scaffoldBackgroundColor: Colors.white,
         textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
-            foregroundColor: const MaterialStatePropertyAll(
+            foregroundColor: const WidgetStatePropertyAll(
               AppColors.primaryColor,
             ),
-            padding: MaterialStatePropertyAll(
+            padding: WidgetStatePropertyAll(
               EdgeInsets.symmetric(
                 horizontal: 8.w,
                 vertical: 8.h,
               ),
             ),
             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-            minimumSize: const MaterialStatePropertyAll(Size.zero),
+            minimumSize: const WidgetStatePropertyAll(Size.zero),
           ),
         ),
       );
