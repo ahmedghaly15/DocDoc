@@ -30,6 +30,11 @@ class AppTextStyles {
     color: Colors.white,
   );
 
+  static TextStyle font16DarkBlueBold = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w700,
+    color: AppColors.darkBlue,
+  );
   static TextStyle font16SemiBold = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.w600,
@@ -69,6 +74,12 @@ class AppTextStyles {
   static TextStyle font12Medium = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeight.w500,
+  );
+
+  static TextStyle font12GreyMedium = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.grey,
   );
 
   static TextStyle font12SemiBold = TextStyle(

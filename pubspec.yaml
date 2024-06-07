@@ -40,6 +40,8 @@ dependencies:
   flutter_launcher_icons: ^0.13.1
   # Flutter plugin for reading and writing simple key-value pairs for cache
   shared_preferences: ^2.0.20
+  # Flutter library to load and cache network images.
+  cached_network_image: ^3.3.1
 
 dev_dependencies:
   flutter_test:

@@ -2,27 +2,23 @@ import 'package:docdoc/src/config/themes/app_colors.dart';
 import 'package:docdoc/src/config/themes/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
-class SeeAllRow extends StatelessWidget {
-  const SeeAllRow({
-    super.key,
-    required this.text,
-    this.seeAllOnPressed,
+class DoctorSpecialitySeeAll extends StatelessWidget {
+  const DoctorSpecialitySeeAll({
+    super.key
   });
 
-  final String text;
-  final VoidCallback? seeAllOnPressed;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          text,
+          'Doctor Speciality',
           style: AppTextStyles.font18SemiBoldDarkBlue,
         ),
         const Spacer(),
         TextButton(
-          onPressed: seeAllOnPressed,
+          onPressed: (){},
           style: TextButton.styleFrom(
             foregroundColor: AppColors.primaryColor,
             textStyle: AppTextStyles.font12Regular,
