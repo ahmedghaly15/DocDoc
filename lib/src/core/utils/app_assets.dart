@@ -73,9 +73,10 @@ class AppAssets {
   /// assets/svgs/app_logo.svg
   static const String svgsAppLogo = "assets/svgs/app_logo.svg";
 
-  /// Assets for svgsGirlDoctor
-  /// assets/svgs/girl_doctor.svg
-  static const String svgsGirlDoctor = "assets/svgs/girl_doctor.svg";
+  /// Assets for svgsGeneralSpeciality
+  /// assets/svgs/general_speciality.svg
+  static const String svgsGeneralSpeciality =
+      "assets/svgs/general_speciality.svg";
 
   /// Assets for svgsLowOpacityLogo
   /// assets/svgs/low_opacity_logo.svg
