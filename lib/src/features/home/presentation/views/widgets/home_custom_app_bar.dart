@@ -11,7 +11,6 @@ class HomeCustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -22,13 +21,14 @@ class HomeCustomAppBar extends StatelessWidget {
             ),
             Text(
               'How are you today?',
-              style: AppTextStyles.font12Grey616161Regular,
+              style: AppTextStyles.font12Color616161Regular,
             ),
           ],
         ),
+        const Spacer(),
         CircleAvatar(
           radius: 20.r,
-          backgroundColor: AppColors.greyF5F5F5,
+          backgroundColor: AppColors.colorF5F5F5,
           child: SvgPicture.asset(AppAssets.svgsNotificationsIcon),
         ),
       ],
