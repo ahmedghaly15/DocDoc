@@ -1,6 +1,6 @@
-import 'package:docdoc/src/core/api/api_error_handler.dart';
 import 'package:docdoc/src/core/api/api_result.dart';
 import 'package:docdoc/src/core/api/api_service.dart';
+import 'package:docdoc/src/core/utils/functions/execute_and_handle_errors.dart';
 import 'package:docdoc/src/features/auth/data/models/login/login_request_body.dart';
 import 'package:docdoc/src/features/auth/data/models/login/login_response.dart';
 
@@ -14,15 +14,9 @@ class LoginRepoImpl implements LoginRepo {
   const LoginRepoImpl(this._apiService);
 
   @override
-  Future<ApiResult<LoginResponse>> login(
-    LoginRequestBody loginRequestBody,
-  ) async {
-    try {
-      final response = await _apiService.login(loginRequestBody);
-
-      return ApiResult.success(response);
-    } catch (error) {
-      return ApiResult.failure(ErrorHandler.handle(error));
-    }
+  Future<ApiResult<LoginResponse>> login(LoginRequestBody loginRequestBody) {
+    return executeAndHandleErrors<LoginResponse>(
+      () async => await _apiService.login(loginRequestBody),
+    );
   }
 }

@@ -3,4 +3,5 @@ class EndPoints {
   static const String authUrl = '${baseUrl}auth/';
   static const String login = '${authUrl}login';
   static const String register = '${authUrl}register';
+  static const String specialization = '${baseUrl}specialization/index';
 }
