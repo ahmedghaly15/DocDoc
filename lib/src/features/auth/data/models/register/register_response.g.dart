@@ -6,17 +6,19 @@ part of 'register_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-RegisterResponse _$RegisterResponseFromJson(Map<String, dynamic> json) =>
-    RegisterResponse(
+_$RegisterResponseImpl _$$RegisterResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$RegisterResponseImpl(
       message: json['message'] as String?,
       userData: json['data'] == null
           ? null
           : UserData.fromJson(json['data'] as Map<String, dynamic>),
       status: json['status'] as bool?,
-      code: json['code'] as int?,
+      code: (json['code'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$RegisterResponseToJson(RegisterResponse instance) =>
+Map<String, dynamic> _$$RegisterResponseImplToJson(
+        _$RegisterResponseImpl instance) =>
     <String, dynamic>{
       'message': instance.message,
       'data': instance.userData,
@@ -24,12 +26,14 @@ Map<String, dynamic> _$RegisterResponseToJson(RegisterResponse instance) =>
       'code': instance.code,
     };
 
-UserData _$UserDataFromJson(Map<String, dynamic> json) => UserData(
+_$UserDataImpl _$$UserDataImplFromJson(Map<String, dynamic> json) =>
+    _$UserDataImpl(
       token: json['token'] as String?,
       userName: json['username'] as String?,
     );
 
-Map<String, dynamic> _$UserDataToJson(UserData instance) => <String, dynamic>{
+Map<String, dynamic> _$$UserDataImplToJson(_$UserDataImpl instance) =>
+    <String, dynamic>{
       'token': instance.token,
       'username': instance.userName,
     };
