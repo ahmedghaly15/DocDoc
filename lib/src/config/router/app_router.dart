@@ -6,6 +6,7 @@ import 'package:docdoc/src/features/auth/presentation/cubits/register/register_c
 import 'package:docdoc/src/features/auth/presentation/views/login_view.dart';
 import 'package:docdoc/src/features/auth/presentation/views/register_view.dart';
 import 'package:docdoc/src/features/entry/presentation/views/entry_view.dart';
+import 'package:docdoc/src/features/home/presentation/cubits/home_cubit.dart';
 import 'package:docdoc/src/features/home/presentation/views/home_view.dart';
 import 'package:docdoc/src/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class AppRouter {
 
       case Routes.loginRoute:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
+          builder: (_) => BlocProvider<LoginCubit>(
             create: (context) => getIt.get<LoginCubit>(),
             child: const LoginView(),
           ),
@@ -30,7 +31,7 @@ class AppRouter {
 
       case Routes.registerRoute:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
+          builder: (_) => BlocProvider<RegisterCubit>(
             create: (context) => getIt.get<RegisterCubit>(),
             child: const RegisterView(),
           ),
@@ -38,7 +39,10 @@ class AppRouter {
 
       case Routes.homeRoute:
         return MaterialPageRoute(
-          builder: (_) => const HomeView(),
+          builder: (_) => BlocProvider<HomeCubit>(
+            create: (context) => getIt.get<HomeCubit>()..getAllSpecialization(),
+            child: const HomeView(),
+          ),
         );
 
       default:
