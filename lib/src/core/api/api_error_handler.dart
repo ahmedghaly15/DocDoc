@@ -66,23 +66,23 @@ extension DataSourceExtension on DataSource {
   ApiErrorModel getFailure() {
     switch (this) {
       case DataSource.noContent:
-        return ApiErrorModel(
+        return const ApiErrorModel(
             code: ResponseCode.noContent, message: ResponseMessage.noContent);
       case DataSource.badRequest:
-        return ApiErrorModel(
+        return const ApiErrorModel(
             code: ResponseCode.badRequest, message: ResponseMessage.badRequest);
       case DataSource.forbidden:
-        return ApiErrorModel(
+        return const ApiErrorModel(
             code: ResponseCode.forbidden, message: ResponseMessage.forbidden);
       case DataSource.unauthorized:
-        return ApiErrorModel(
+        return const ApiErrorModel(
             code: ResponseCode.unauthorized,
             message: ResponseMessage.unauthorized);
       case DataSource.notFound:
-        return ApiErrorModel(
+        return const ApiErrorModel(
             code: ResponseCode.notFound, message: ResponseMessage.notFound);
       case DataSource.internalServerError:
-        return ApiErrorModel(
+        return const ApiErrorModel(
             code: ResponseCode.internalServerError,
             message: ResponseMessage.internalServerError);
       case DataSource.connectTimeout:
