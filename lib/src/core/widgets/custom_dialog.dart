@@ -45,7 +45,7 @@ class CustomDialog {
                     children: <Widget>[
                       Text(
                         _chooseSnackBarTitle(state),
-                        style: AppTextStyles.font18Bold,
+                        style: AppTextStyles.font18BoldDarkBlue,
                       ),
                       SizedBox(height: 8.h),
                       Flexible(

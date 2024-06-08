@@ -26,7 +26,7 @@ class RegisterBlocListener extends StatelessWidget {
               message: 'Congratulations, you have registered successfully!',
               actionText: 'Continue',
               onAction: () =>
-                  context.pushNamedAndRemoveUntil(newRoute: Routes.loginRoute),
+                  context.pushNamedAndRemoveUntil(newRoute: Routes.homeRoute),
             );
           },
           error: (error) {
