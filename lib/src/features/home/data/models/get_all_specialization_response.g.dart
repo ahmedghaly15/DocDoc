@@ -6,9 +6,26 @@ part of 'get_all_specialization_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GetAllSpecializationResponseImpl _$$GetAllSpecializationResponseImplFromJson(
+GetAllSpecializationResponse _$GetAllSpecializationResponseFromJson(
         Map<String, dynamic> json) =>
-    _$GetAllSpecializationResponseImpl(
+    GetAllSpecializationResponse(
+      message: json['message'] as String,
+      data: (json['data'] as List<dynamic>)
+          .map((e) =>
+              GetAllSpecializationData.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$GetAllSpecializationResponseToJson(
+        GetAllSpecializationResponse instance) =>
+    <String, dynamic>{
+      'message': instance.message,
+      'data': instance.data,
+    };
+
+GetAllSpecializationData _$GetAllSpecializationDataFromJson(
+        Map<String, dynamic> json) =>
+    GetAllSpecializationData(
       id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       doctors: (json['doctors'] as List<dynamic>)
@@ -16,15 +33,15 @@ _$GetAllSpecializationResponseImpl _$$GetAllSpecializationResponseImplFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$GetAllSpecializationResponseImplToJson(
-        _$GetAllSpecializationResponseImpl instance) =>
+Map<String, dynamic> _$GetAllSpecializationDataToJson(
+        GetAllSpecializationData instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'doctors': instance.doctors,
     };
 
-_$DoctorImpl _$$DoctorImplFromJson(Map<String, dynamic> json) => _$DoctorImpl(
+Doctor _$DoctorFromJson(Map<String, dynamic> json) => Doctor(
       id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       email: json['email'] as String,
@@ -36,13 +53,12 @@ _$DoctorImpl _$$DoctorImplFromJson(Map<String, dynamic> json) => _$DoctorImpl(
       specialization: Specialization.fromJson(
           json['specialization'] as Map<String, dynamic>),
       city: City.fromJson(json['city'] as Map<String, dynamic>),
-      appointPrice: json['appoint_price'] as String,
+      appointPrice: (json['appoint_price'] as num).toInt(),
       startTime: json['start_time'] as String,
       endTime: json['end_time'] as String,
     );
 
-Map<String, dynamic> _$$DoctorImplToJson(_$DoctorImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$DoctorToJson(Doctor instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'email': instance.email,
@@ -58,40 +74,37 @@ Map<String, dynamic> _$$DoctorImplToJson(_$DoctorImpl instance) =>
       'end_time': instance.endTime,
     };
 
-_$SpecializationImpl _$$SpecializationImplFromJson(Map<String, dynamic> json) =>
-    _$SpecializationImpl(
+Specialization _$SpecializationFromJson(Map<String, dynamic> json) =>
+    Specialization(
       id: (json['id'] as num).toInt(),
       name: json['name'] as String,
     );
 
-Map<String, dynamic> _$$SpecializationImplToJson(
-        _$SpecializationImpl instance) =>
+Map<String, dynamic> _$SpecializationToJson(Specialization instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
     };
 
-_$CityImpl _$$CityImplFromJson(Map<String, dynamic> json) => _$CityImpl(
+City _$CityFromJson(Map<String, dynamic> json) => City(
       id: (json['id'] as num).toInt(),
       name: json['name'] as String,
       governrate:
           Governrate.fromJson(json['governrate'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$CityImplToJson(_$CityImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$CityToJson(City instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
       'governrate': instance.governrate,
     };
 
-_$GovernrateImpl _$$GovernrateImplFromJson(Map<String, dynamic> json) =>
-    _$GovernrateImpl(
+Governrate _$GovernrateFromJson(Map<String, dynamic> json) => Governrate(
       id: (json['id'] as num).toInt(),
       name: json['name'] as String,
     );
 
-Map<String, dynamic> _$$GovernrateImplToJson(_$GovernrateImpl instance) =>
+Map<String, dynamic> _$GovernrateToJson(Governrate instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

@@ -1,6 +1,6 @@
 import 'package:docdoc/src/config/themes/app_colors.dart';
 import 'package:docdoc/src/config/themes/app_text_styles.dart';
-import 'package:docdoc/src/core/utils/app_navigator.dart';
+import 'package:docdoc/src/core/helpers/extensions.dart';
 import 'package:flutter/material.dart';
 
 class AlreadyHaveAnAcc extends StatelessWidget {

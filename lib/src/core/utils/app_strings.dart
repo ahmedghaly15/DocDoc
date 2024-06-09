@@ -1,4 +1,3 @@
 class AppStrings {
-  static const String appTitle = 'Docdoc';
-  static const String cachedOnboarding = 'Cached onboarding';
+  static const String appTitle = 'DocDoc';
 }

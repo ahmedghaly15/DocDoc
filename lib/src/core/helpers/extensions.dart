@@ -26,3 +26,7 @@ extension AppNavigator on BuildContext {
 
   void pop() => Navigator.pop(this);
 }
+
+extension StringExtension on String? {
+  bool get isNullOrEmpty => this == null || this == '';
+}
