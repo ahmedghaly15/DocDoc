@@ -4,7 +4,7 @@ import 'package:docdoc/src/core/helpers/shared_pref_helper.dart';
 
 Future<void> checkIfUserLoggedIn() async {
   String? userToken =
-      await SharedPrefHelper.getString(SharedPrefKeys.userToken);
+      await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken);
   if (userToken.isNullOrEmpty) {
     isUserLoggedIn = false;
   } else {
