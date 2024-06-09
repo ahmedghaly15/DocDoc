@@ -7,13 +7,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  await setupGetIt();
-
+  setupGetIt();
   // To fix texts being hidden bug in release mode
   await ScreenUtil.ensureScreenSize();
-
   Bloc.observer = MyBlocObserver();
-
   runApp(const DocdocApp());
 }
