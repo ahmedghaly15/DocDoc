@@ -1,6 +1,6 @@
 import 'package:docdoc/src/config/router/routes.dart';
+import 'package:docdoc/src/core/helpers/extensions.dart';
 import 'package:docdoc/src/core/helpers/shared_pref_helper.dart';
-import 'package:docdoc/src/core/utils/app_navigator.dart';
 import 'package:docdoc/src/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

@@ -1,7 +1,7 @@
 import 'package:docdoc/src/config/router/routes.dart';
 import 'package:docdoc/src/config/themes/app_text_styles.dart';
+import 'package:docdoc/src/core/helpers/extensions.dart';
 import 'package:docdoc/src/core/helpers/shared_pref_helper.dart';
-import 'package:docdoc/src/core/utils/app_navigator.dart';
 import 'package:docdoc/src/core/utils/app_strings.dart';
 import 'package:docdoc/src/core/widgets/primary_button.dart';
 import 'package:docdoc/src/features/onboarding/presentation/view/widgets/app_logo_and_name.dart';
