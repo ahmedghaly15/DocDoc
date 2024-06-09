@@ -5,7 +5,6 @@ import 'package:docdoc/src/features/auth/presentation/cubits/login/login_cubit.d
 import 'package:docdoc/src/features/auth/presentation/cubits/register/register_cubit.dart';
 import 'package:docdoc/src/features/auth/presentation/views/login_view.dart';
 import 'package:docdoc/src/features/auth/presentation/views/register_view.dart';
-import 'package:docdoc/src/features/entry/presentation/views/entry_view.dart';
 import 'package:docdoc/src/features/home/presentation/cubits/home_cubit.dart';
 import 'package:docdoc/src/features/home/presentation/views/home_view.dart';
 import 'package:docdoc/src/features/onboarding/presentation/view/onboarding_view.dart';
@@ -15,11 +14,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class AppRouter {
   static Route<dynamic>? onGenerateRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
-      case Routes.initialRoute:
-        return MaterialPageRoute(
-          builder: (_) => const EntryView(),
-        );
-
       case Routes.onboardingRoute:
         return MaterialPageRoute(
           builder: (_) => const OnboardingView(),

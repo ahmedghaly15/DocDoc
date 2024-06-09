@@ -19,7 +19,9 @@ class DocdocApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: AppStrings.appTitle,
         theme: AppTheme.light,
-        initialRoute: isUserLoggedIn ? Routes.homeRoute : Routes.loginRoute,
+        initialRoute: isOnboardingVisited
+            ? (isUserLoggedIn ? Routes.homeRoute : Routes.loginRoute)
+            : Routes.onboardingRoute,
         onGenerateRoute: AppRouter.onGenerateRoute,
       ),
     );
