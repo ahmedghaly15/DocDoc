@@ -16,10 +16,14 @@ class AppRouter {
   static Route<dynamic>? onGenerateRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
       case Routes.initialRoute:
-        return MaterialPageRoute(builder: (_) => const EntryView());
+        return MaterialPageRoute(
+          builder: (_) => const EntryView(),
+        );
 
       case Routes.onboardingRoute:
-        return MaterialPageRoute(builder: (_) => const OnboardingView());
+        return MaterialPageRoute(
+          builder: (_) => const OnboardingView(),
+        );
 
       case Routes.loginRoute:
         return MaterialPageRoute(
@@ -46,11 +50,11 @@ class AppRouter {
         );
 
       default:
-        return unFoundRoute();
+        return _unFoundRoute();
     }
   }
 
-  static Route<dynamic> unFoundRoute() {
+  static Route<dynamic> _unFoundRoute() {
     return MaterialPageRoute(
       builder: (context) => Scaffold(
         body: Center(

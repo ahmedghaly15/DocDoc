@@ -6,6 +6,8 @@ import 'package:docdoc/src/features/auth/data/repos/login_repo.dart';
 import 'package:docdoc/src/features/auth/data/repos/register_repo.dart';
 import 'package:docdoc/src/features/auth/presentation/cubits/login/login_cubit.dart';
 import 'package:docdoc/src/features/auth/presentation/cubits/register/register_cubit.dart';
+import 'package:docdoc/src/features/home/data/repos/home_repo.dart';
+import 'package:docdoc/src/features/home/presentation/cubits/home_cubit.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
