@@ -364,8 +364,6 @@ abstract class _$$GetAllSpecializationSuccessImplCopyWith<T, $Res> {
       __$$GetAllSpecializationSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({GetAllSpecializationResponse data});
-
-  $GetAllSpecializationResponseCopyWith<$Res> get data;
 }
 
 /// @nodoc
@@ -389,14 +387,6 @@ class __$$GetAllSpecializationSuccessImplCopyWithImpl<T, $Res>
           : data // ignore: cast_nullable_to_non_nullable
               as GetAllSpecializationResponse,
     ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $GetAllSpecializationResponseCopyWith<$Res> get data {
-    return $GetAllSpecializationResponseCopyWith<$Res>(_value.data, (value) {
-      return _then(_value.copyWith(data: value));
-    });
   }
 }
 

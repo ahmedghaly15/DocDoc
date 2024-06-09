@@ -4,7 +4,7 @@ part 'register_response.g.dart';
 part 'register_response.freezed.dart';
 
 @freezed
-class RegisterResponse {
+class RegisterResponse with _$RegisterResponse {
   const factory RegisterResponse({
     String? message,
     @JsonKey(name: 'data') UserData? userData,

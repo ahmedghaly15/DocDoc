@@ -1,8 +1,8 @@
 import 'package:docdoc/src/config/router/routes.dart';
 import 'package:docdoc/src/config/themes/app_text_styles.dart';
+import 'package:docdoc/src/core/helpers/constants.dart';
 import 'package:docdoc/src/core/helpers/extensions.dart';
 import 'package:docdoc/src/core/helpers/shared_pref_helper.dart';
-import 'package:docdoc/src/core/utils/app_strings.dart';
 import 'package:docdoc/src/core/widgets/primary_button.dart';
 import 'package:docdoc/src/features/onboarding/presentation/view/widgets/app_logo_and_name.dart';
 import 'package:docdoc/src/features/onboarding/presentation/view/widgets/doctor_and_onboarding_title.dart';
@@ -50,10 +50,8 @@ class OnboardingView extends StatelessWidget {
   }
 
   void _navigateToLogin(BuildContext context) {
-    SharedPrefHelper.setData(AppStrings.cachedOnboarding, true).then((value) {
-      if (value) {
-        context.pushNamed(routeName: Routes.loginRoute);
-      }
+    SharedPrefHelper.setData(SharedPrefKeys.onboarding, true).then((value) {
+      if (value) context.pushReplacementNamed(newRoute: Routes.loginRoute);
     });
   }
 }
